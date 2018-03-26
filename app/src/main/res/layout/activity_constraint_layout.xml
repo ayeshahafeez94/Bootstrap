@@ -49,6 +49,14 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <View xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/AppTheme.Block"
+
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="1dp"
+        app:layout_constraintRight_toLeftOf="@+id/center_block"
+        app:layout_constraintTop_toBottomOf="@+id/center_block" />
+
+    <View xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/center_block"
 
         style="@style/AppTheme.Block"
