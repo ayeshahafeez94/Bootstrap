@@ -11,9 +11,10 @@
     <style name="AppTheme.Block">
         <item name="android:layout_height">50dp</item>
         <item name="android:layout_width">50dp</item>
+        <item name="android:background">@color/green</item>
 
         <!--<item name="android:layout_weight">1</item>-->
-        <item name="android:background">#000</item>
+        <!--<item name="android:background">#000</item>-->
     </style>
 
     <style name="AppTheme.Block2">
