@@ -36,7 +36,7 @@ public class AssetsPropertyReader {
             properties.load(inputStream);
 
         } catch (IOException e) {
-            
+
             Log.e("AssetsPropertyReader",e.toString());
         }
         return properties;

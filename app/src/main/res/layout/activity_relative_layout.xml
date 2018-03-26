@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/AppTheme.Block"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:id="@+id/first_block">
+
+    </View>
+
+    <View xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/AppTheme.Block"
+        android:layout_below="@+id/first_block"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp">
+
+    </View>
+
+    <View xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/AppTheme.Block"
+        android:id="@+id/center_block"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <View xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/AppTheme.Block"
+        android:layout_below="@+id/center_block"
+        android:layout_toLeftOf="@+id/center_block"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="1dp" />
+
+    <View xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/AppTheme.Block"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="2dp" />
+
+
+</RelativeLayout>
