@@ -11,10 +11,9 @@ import training.acn.com.bootstrap.utils.Configurations;
 
 public class RecyclerViewActivity extends AppCompatActivity implements ListAdapter.ListItemClickListener {
 
-   private RecyclerView mList;
-   private   ListAdapter mlistAdapter;
-   private Toast mToast;
-
+    private RecyclerView mList;
+    private ListAdapter mlistAdapter;
+    private Toast mToast;
 
 
     @Override
@@ -30,9 +29,8 @@ public class RecyclerViewActivity extends AppCompatActivity implements ListAdapt
 
         int noOfListItems = Integer.parseInt(Configurations.properties.getProperty("NO_OF_LIST_ITEMS"));
 
-        mlistAdapter = new ListAdapter(noOfListItems,this);
+        mlistAdapter = new ListAdapter(noOfListItems, this);
         mList.setAdapter(mlistAdapter);
-
 
 
     }
@@ -40,10 +38,10 @@ public class RecyclerViewActivity extends AppCompatActivity implements ListAdapt
     @Override
     public void onClick(int index) {
 
-        if(mToast!=null){
+        if (mToast != null) {
             mToast.cancel();
         }
-        mToast= Toast.makeText(this,"Index: "+index+" is clicked",Toast.LENGTH_LONG);
+        mToast = Toast.makeText(this, "Index: " + index + " is clicked", Toast.LENGTH_LONG);
         mToast.show();
     }
 }
