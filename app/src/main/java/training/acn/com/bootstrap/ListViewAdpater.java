@@ -1,13 +1,11 @@
 package training.acn.com.bootstrap;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 /**
@@ -21,7 +19,7 @@ public class ListViewAdpater extends BaseAdapter{
     LayoutInflater inflater;
 
     public ListViewAdpater(Context applicationContext, String[] name, int[] icons) {
-        this.context = context;
+        this.context = applicationContext;
         this.name = name;
         this.icons = icons;
         inflater = (LayoutInflater.from(applicationContext));
@@ -44,10 +42,10 @@ public class ListViewAdpater extends BaseAdapter{
     //this is a case to show one listView .
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        view = inflater.inflate(R.layout.activity_list_view,null);
-        TextView nameT = (TextView) view.findViewById(R.id.textView);
-        ImageView iconT = (ImageView) view.findViewById(R.id.icon);
-        //nameT.setText(name[i]);
+        view = inflater.inflate(R.layout.list_item, null);
+        TextView nameT = (TextView) view.findViewById(R.id.tv_display);
+        ImageView iconT = (ImageView) view.findViewById(R.id.iv_icon);
+        nameT.setText("Index: " + i);
         iconT.setImageResource(R.drawable.robot1);
         return view;
     }

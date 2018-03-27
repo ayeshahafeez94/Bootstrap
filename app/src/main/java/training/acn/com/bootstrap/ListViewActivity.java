@@ -1,10 +1,8 @@
 package training.acn.com.bootstrap;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 
 public class ListViewActivity extends Activity {
@@ -19,8 +17,8 @@ public class ListViewActivity extends Activity {
         setContentView(R.layout.activity_list_view);
         mListView = (ListView) findViewById(R.id.listView);
 
-
-        ListViewAdpater mListViewAdapter = new ListViewAdpater(getApplicationContext(),name,icons);
+        Context context = this.getApplicationContext();
+        ListViewAdpater mListViewAdapter = new ListViewAdpater(this.getApplicationContext(), name, icons);
         mListView.setAdapter(mListViewAdapter);
 
 
