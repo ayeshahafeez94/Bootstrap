@@ -12,6 +12,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 import training.acn.com.bootstrap.R;
+import training.acn.com.bootstrap.utils.Utilities;
 
 /**
  * Created by ayesha.hafeez on 3/26/2018.
@@ -49,7 +50,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ItemViewHolder
 
         //COMEPLETE get the images
 
-        viewHolder.viewHolderImage.setBackgroundResource(getRandomImage());
+        viewHolder.viewHolderImage.setBackgroundResource(Utilities.getRandomImage());
 
         viewHolderCount++;
         Log.d(TAG, "onCreateViewHolder: number of ViewHolders created: "
@@ -67,27 +68,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ItemViewHolder
         return mItemCount;
     }
 
-    private int getRandomImage() {
-        Random random = new Random();
-        int resourceId;
 
-        int index = random.nextInt() % 3;
-        switch (index) {
-            case 0:
-                resourceId = R.drawable.pic2;
-                break;
-            case 1:
-                resourceId = R.drawable.pic3;
-                break;
-            case 2:
-                resourceId = R.drawable.pic4;
-                break;
-            default:
-                resourceId = R.drawable.pic2;
-
-        }
-        return resourceId;
-    }
 
     class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 

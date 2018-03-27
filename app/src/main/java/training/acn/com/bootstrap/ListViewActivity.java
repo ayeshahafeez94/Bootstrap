@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import training.acn.com.bootstrap.utils.Configurations;
+
 public class ListViewActivity extends Activity {
     private ListView mListView ;
 
@@ -20,7 +22,7 @@ public class ListViewActivity extends Activity {
         mListView = (ListView) findViewById(R.id.listView);
 
 
-        ListViewAdpater mListViewAdapter = new ListViewAdpater(getApplicationContext(),name,icons);
+        ListViewAdpater mListViewAdapter = new ListViewAdpater(getApplicationContext(),Integer.parseInt(Configurations.properties.getProperty("NO_OF_LIST_ITEMS")));
         mListView.setAdapter(mListViewAdapter);
 
 

@@ -10,25 +10,26 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import training.acn.com.bootstrap.utils.Utilities;
+
 /**
  * Created by afnan.khaleel on 26-Mar-18.
  */
 
 public class ListViewAdpater extends BaseAdapter{
     Context context;
-    String name[];
-    int icons[];
+    int noOfItems;
+
     LayoutInflater inflater;
 
-    public ListViewAdpater(Context applicationContext, String[] name, int[] icons) {
+    public ListViewAdpater(Context applicationContext,int noOfListItems) {
         this.context = context;
-        this.name = name;
-        this.icons = icons;
+        this.noOfItems=noOfListItems;
         inflater = (LayoutInflater.from(applicationContext));
     }
     @Override
     public int getCount() {
-        return name.length;
+        return noOfItems;
     }
 
     @Override
@@ -44,11 +45,11 @@ public class ListViewAdpater extends BaseAdapter{
     //this is a case to show one listView .
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        view = inflater.inflate(R.layout.activity_list_view,null);
-        TextView nameT = (TextView) view.findViewById(R.id.textView);
-        ImageView iconT = (ImageView) view.findViewById(R.id.icon);
-        //nameT.setText(name[i]);
-        iconT.setImageResource(R.drawable.robot1);
+        view = inflater.inflate(R.layout.list_item,null);
+        TextView nameT = (TextView) view.findViewById(R.id.tv_display);
+        ImageView iconT = (ImageView) view.findViewById(R.id.iv_icon);
+        nameT.setText("Index: "+i);
+        iconT.setImageResource(Utilities.getRandomImage());
         return view;
     }
 }
