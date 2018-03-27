@@ -20,7 +20,7 @@ public class Utilities {
                 resourceId = R.drawable.pic2;
                 break;
             case 1:
-                resourceId = R.drawable.pic3;
+                resourceId = R.drawable.robot1;
                 break;
             case 2:
                 resourceId = R.drawable.pic4;

@@ -20,6 +20,8 @@ public class ListViewActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
         mListView = (ListView) findViewById(R.id.listView);
+        mListView.setMinimumHeight(100);
+
 
 
         ListViewAdpater mListViewAdapter = new ListViewAdpater(getApplicationContext(),Integer.parseInt(Configurations.properties.getProperty("NO_OF_LIST_ITEMS")));
