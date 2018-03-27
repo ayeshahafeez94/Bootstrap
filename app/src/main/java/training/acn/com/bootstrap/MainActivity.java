@@ -8,16 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import java.util.Properties;
-
 import training.acn.com.bootstrap.utils.AssetsPropertyReader;
-import training.acn.com.bootstrap.utils.RecyclerViewActivity;
+import training.acn.com.bootstrap.utils.Configurations;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private AssetsPropertyReader mAssetsPropertyReader;
     private Context mContext;
-    private Properties mProperties;
+    private Configurations configurations;
     String TAG = MainActivity.class.getSimpleName();
 
     //Buttons
@@ -30,14 +28,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mContext=this;
-        mAssetsPropertyReader = new AssetsPropertyReader(mContext);
-        mProperties=mAssetsPropertyReader.getProperties("application.properties");
+        configurations = new Configurations(mContext);
 
-        mLinearLayoutBtn = findViewById(R.id.btn_linearlayout);
-        mRelativeLayoutBtn = findViewById(R.id.btn_relativelayout);
-        mConstraintLayoutBtn = findViewById(R.id.btn_constraintlayout);
-        mListViewBtn = findViewById(R.id.btn_listview);
-        mRecyclerViewBtn = findViewById(R.id.btn_recyclerview);
+        mLinearLayoutBtn = (Button) findViewById(R.id.btn_linearlayout);
+        mRelativeLayoutBtn = (Button) findViewById(R.id.btn_relativelayout);
+        mConstraintLayoutBtn = (Button) findViewById(R.id.btn_constraintlayout);
+        mListViewBtn = (Button) findViewById(R.id.btn_listview);
+        mRecyclerViewBtn = (Button) findViewById(R.id.btn_recyclerview);
 
         mLinearLayoutBtn.setOnClickListener(this);
         mRelativeLayoutBtn.setOnClickListener(this);
