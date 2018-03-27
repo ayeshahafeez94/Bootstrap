@@ -1,13 +1,11 @@
 package training.acn.com.bootstrap;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import training.acn.com.bootstrap.utils.Utilities;
@@ -45,7 +43,7 @@ public class ListViewAdpater extends BaseAdapter{
     //this is a case to show one listView .
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        view = inflater.inflate(R.layout.list_item,null);
+        view = inflater.inflate(R.layout.list_item, viewGroup, false);
         TextView nameT = (TextView) view.findViewById(R.id.tv_display);
         ImageView iconT = (ImageView) view.findViewById(R.id.iv_icon);
         nameT.setText("Index: "+i);
