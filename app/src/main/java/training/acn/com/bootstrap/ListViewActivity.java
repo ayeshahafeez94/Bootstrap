@@ -20,7 +20,6 @@ public class ListViewActivity extends Activity {
         mListView = (ListView) findViewById(R.id.listView);
 
 
-
         ListViewAdpater mListViewAdapter = new ListViewAdpater(getApplicationContext(),name,icons);
         mListView.setAdapter(mListViewAdapter);
 
